@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách hoa</title>
+</head>
+<body>
+    <h1>Danh sách các loài hoa</h1>
+    <ul>
+        {% for flower in flowers %}
+        <li>
+            <h2>{{ flower.name }}</h2>
+            <p>{{ flower.description }}</p>
+            <img src="/static/images/{{ flower.image }}" alt="{{ flower.name }}" width="200">
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

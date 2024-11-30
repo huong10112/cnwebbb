@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Danh sách hoa</title>
+</head>
+<body>
+    <h1>Danh sách hoa</h1>
+    <div class="flower-list">
+        {% for flower in flowers %}
+        <div class="flower-item">
+            <img src="{{ flower.image_path }}" alt="{{ flower.name }}">
+            <h2>{{ flower.name }}</h2>
+            <p>{{ flower.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

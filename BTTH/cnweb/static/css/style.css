@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.flower-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.flower-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+    background-color: #fff;
+}
+
+.flower-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.flower-item h2 {
+    font-size: 18px;
+    color: #444;
+}
+
+.flower-item p {
+    font-size: 14px;
+    color: #666;
+}

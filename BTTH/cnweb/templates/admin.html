@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Quản trị hoa</title>
+</head>
+<body>
+    <h1>Quản trị hoa</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên hoa</th>
+                <th>Mô tả</th>
+                <th>Ảnh</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for flower in flowers %}
+            <tr>
+                <td>{{ flower.id }}</td>
+                <td>{{ flower.name }}</td>
+                <td>{{ flower.description }}</td>
+                <td><img src="{{ flower.image_path }}" alt="{{ flower.name }}" width="100"></td>
+                <td>
+                    <a href="/delete/{{ flower.id }}">Xóa</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h2>Thêm hoa mới</h2>
+    <form action="/add" method="post">
+        <input type="text" name="name" placeholder="Tên hoa" required>
+        <textarea name="description" placeholder="Mô tả" required></textarea>
+        <input type="text" name="image_path" placeholder="Đường dẫn ảnh" required>
+        <button type="submit">Thêm</button>
+    </form>
+</body>
+</html>
